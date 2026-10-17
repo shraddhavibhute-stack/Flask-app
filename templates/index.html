@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App</title>
+</head>
+<body>
+    <h1>Welcome to My Flask App!</h1>
+
+    <p>This is a basic Python web application.</p>
+
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/about">About</a>
+    </nav>
+
+    <hr>
+
+    <h2>Say Hello</h2>
+
+    <form action="/hello" method="POST">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if name %}
+        <h3>Hello, {{ name }}!</h3>
+    {% endif %}
+</body>
+</html>
